@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react-dom": "^16.8.3",
+    "react-hot-loader": "^4.7.1"
   }
 }
