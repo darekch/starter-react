@@ -11,6 +11,13 @@ exports[`<App /> snapshot 1`] = `
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </p>
+    <Button>
+      <button
+        type="submit"
+      >
+        Button
+      </button>
+    </Button>
   </div>
 </App>
 `;
