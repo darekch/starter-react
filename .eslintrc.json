@@ -1,5 +1,4 @@
 {
-  "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["react", "prettier"],
   "env": {
@@ -7,15 +6,16 @@
     "node": true,
     "jest": true
   },
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
   "settings": {
     "import/resolver": {
       "node": {
         "paths": ["src"]
       }
     }
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018
   },
   "rules": {
     "react/prefer-stateless-function": ["warn"],
