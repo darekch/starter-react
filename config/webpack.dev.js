@@ -9,21 +9,23 @@ const dirname = fs.realpathSync(process.cwd());
 module.exports = env =>
   merge(common(env), {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     module: {
       rules: [
         {
           enforce: 'pre',
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
+
           loader: 'eslint-loader',
         },
       ],
     },
     devServer: {
       contentBase: path.join(dirname, 'public/'),
+      publicPath: '/',
+      historyApiFallback: true,
       port: 3000,
-      publicPath: 'http://localhost:3000/',
       hot: true,
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],

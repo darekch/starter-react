@@ -7,17 +7,13 @@ const getClientEnvironment = require('./env');
 const dirname = fs.realpathSync(process.cwd());
 
 module.exports = env => ({
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
-        options: {
-          presets: ['@babel/env', '@babel/react'],
-          plugins: ['react-hot-loader/babel'],
-        },
       },
       {
         test: /\.css$/,
