@@ -2,7 +2,7 @@
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['prettier', 'react', 'jsx-a11y'],
+  plugins: ['prettier', 'react', 'react-hooks', 'redux-saga', 'jsx-a11y'],
   env: {
     browser: true,
     node: true,

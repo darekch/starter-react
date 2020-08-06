@@ -26,8 +26,9 @@ module.exports = env => ({
     modules: [path.resolve(dirname, 'src'), 'node_modules'],
   },
   output: {
+    filename: '[hash].bundle.js',
+    chunkFilename: '[chunkhash].bundle.js',
     path: path.resolve(dirname, 'dist/'),
-    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({ template: 'public/index.html' }),

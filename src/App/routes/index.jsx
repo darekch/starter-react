@@ -1,8 +1,9 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
-import Items from 'features/Items';
+import RoutesErrorBoundary from 'common/errors/boundaries/routes';
+// import Items from 'features/Items/containers/ItemsList/ItemsList';
+import ItemsContainers from 'features/Items';
 
 const routes = () => (
   <div>
@@ -11,7 +12,9 @@ const routes = () => (
       <Link to="/items">Items</Link>
     </nav>
     <Switch>
-      <Route exact path="/items" component={Items} />
+      <RoutesErrorBoundary>
+        <Route exact path="/items" component={ItemsContainers.ItemsListContainer} />
+      </RoutesErrorBoundary>
     </Switch>
   </div>
 );
